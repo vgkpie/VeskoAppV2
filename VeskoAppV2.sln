@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeskoAppV2", "VeskoAppV2.csproj", "{22367218-CC18-B9A9-C662-C236B0702797}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22367218-CC18-B9A9-C662-C236B0702797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22367218-CC18-B9A9-C662-C236B0702797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22367218-CC18-B9A9-C662-C236B0702797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22367218-CC18-B9A9-C662-C236B0702797}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46339154-6B9F-4FBA-9C20-26C4F9CF0B4D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,42 @@
+@model List<VeskoAppV2.Models.ViewModels.AdminTrainerWorkoutsViewModel>
+
+@{
+    ViewData["Title"] = "Admin Dashboard - Trainer Workouts";
+}
+
+<h2>Trainer Workouts</h2>
+<ul>
+    <li><a asp-controller="Admin" asp-action="ListUsers">Управление на потребители</a></li>
+    <li><a asp-controller="Admin" asp-action="CreateWorkout">Създаване на тренировка</a></li>
+</ul>
+
+@foreach (var trainerWorkouts in Model)
+{
+    <h3>@trainerWorkouts.Trainer.Email (@trainerWorkouts.Trainer.FirstName @trainerWorkouts.Trainer.FamilyName)</h3>
+    @if (trainerWorkouts.Workouts != null && trainerWorkouts.Workouts.Count > 0)
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Member</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var workout in trainerWorkouts.Workouts)
+                {
+                    <tr>
+                        <td>@workout.Member?.Email</td>
+                        <td>@workout.StartsAtStation.ToString("g")</td>
+                        <td>@workout.ArrivesAtDestination.ToString("g")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No workouts scheduled for this trainer.</p>
+    }
+}

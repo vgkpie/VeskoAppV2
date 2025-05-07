@@ -1,0 +1,39 @@
+@model VeskoAppV2.Models.ViewModels.CreateWorkoutViewModel
+
+@{
+    ViewData["Title"] = "Create Workout";
+}
+
+<h2>Create Workout</h2>
+
+<form asp-action="CreateWorkout" method="post">
+    <div class="form-group">
+        <label asp-for="SelectedMemberId">Member</label>
+        <select asp-for="SelectedMemberId" class="form-control" asp-items="Model.Members">
+            <option value="">Select Member</option>
+        </select>
+        <span asp-validation-for="SelectedMemberId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SelectedTrainerId">Trainer</label>
+        <select asp-for="SelectedTrainerId" class="form-control" asp-items="Model.Trainers">
+            <option value="">Select Trainer</option>
+        </select>
+        <span asp-validation-for="SelectedTrainerId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Workout.StartsAtStation">Start Time</label>
+        <input asp-for="Workout.StartsAtStation" class="form-control" type="datetime-local" />
+        <span asp-validation-for="Workout.StartsAtStation" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Workout.ArrivesAtDestination">End Time</label>
+        <input asp-for="Workout.ArrivesAtDestination" class="form-control" type="datetime-local" />
+        <span asp-validation-for="Workout.ArrivesAtDestination" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

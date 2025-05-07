@@ -1,0 +1,34 @@
+@model List<VeskoAppV2.Models.Workouts>
+
+@{
+    ViewData["Title"] = "Trainer Workouts";
+}
+
+<h2>Your Workouts</h2>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Member</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var workout in Model)
+            {
+                <tr>
+                    <td>@workout.Member?.FirstName @workout.Member?.FamilyName</td>
+                    <td>@workout.StartsAtStation.ToString("g")</td>
+                    <td>@workout.ArrivesAtDestination.ToString("g")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No workouts scheduled.</p>
+}
