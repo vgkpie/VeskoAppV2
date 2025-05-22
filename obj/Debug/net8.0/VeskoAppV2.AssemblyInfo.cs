@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VeskoAppV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f29a4a1e0fef3f513885e4b526ec4def1333a00")]
 [assembly: System.Reflection.AssemblyProductAttribute("VeskoAppV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VeskoAppV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
